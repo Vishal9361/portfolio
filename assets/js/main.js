@@ -77,7 +77,9 @@ function activateNavOnScroll() {
 function smoothScrollNavigation() {
   const navAndActionLinks = document.querySelectorAll('a[href^="#"]');
   const navbarCollapse = document.getElementById("mainNav");
-  const collapseInstance = navbarCollapse ? bootstrap.Collapse.getOrCreateInstance(navbarCollapse) : null;
+  const collapseInstance = navbarCollapse
+    ? bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false })
+    : null;
 
   navAndActionLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
