@@ -441,6 +441,12 @@ section.section-space {
   color: #f8fafc;
 }
 
+.contact-box .contact-form-status.alert-success {
+  background: rgba(52, 211, 153, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  color: #d1fae5;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px) scale(0.98);

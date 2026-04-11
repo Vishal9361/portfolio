@@ -177,6 +177,37 @@ function parallaxOrbs() {
   );
 }
 
+function initContactForm() {
+  const form = document.querySelector(".contact-form");
+  const successEl = document.getElementById("contact-success");
+  if (!form) {
+    return;
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const to = form.getAttribute("data-mail-to");
+    if (!to) {
+      return;
+    }
+
+    const name = document.getElementById("name")?.value.trim() ?? "";
+    const email = document.getElementById("email")?.value.trim() ?? "";
+    const subject = document.getElementById("subject")?.value.trim() ?? "";
+    const message = document.getElementById("message")?.value.trim() ?? "";
+
+    const body = [`Name: ${name}`, `Reply-to: ${email}`, "", message].join("\n");
+    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+
+    if (successEl) {
+      successEl.classList.remove("d-none");
+      successEl.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
+  });
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();
 typeEffect();
 revealOnScroll();
@@ -185,3 +216,4 @@ smoothScrollNavigation();
 sectionTransitionOnScroll();
 navbarScrollEffect();
 parallaxOrbs();
+initContactForm();

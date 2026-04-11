@@ -58,10 +58,6 @@
               <img src="./assets/images/portfolio-img1.jpeg" alt="Vishal P profile photo" class="profile-image" />
             </div>
             <h3 class="text-white fw-semibold mt-3 mb-2">Frontend & MERN Developer</h3>
-            <p class="text-light-emphasis mb-0">
-              Replace this image with your own by adding your photo to
-              <strong>assets/images/profile-placeholder.svg</strong> or updating the `src` path.
-            </p>
           </div>
         </div>
       </div>
@@ -128,23 +124,25 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="timeline-card reveal h-100">
-            <span class="timeline-year">2024 - Present</span>
-            <h5>Bachelor's Degree</h5>
-            <p class="mb-0">Add your college/university name and specialization here.</p>
+            <span class="timeline-year">2022 - 2026</span>
+            <h5>Bachelor's Engineering(ECE)</h5>
+            <p class="mb-0">PSN College of Engineering and Technology, Tirunelveli.</p><p> CGPA: 8.45/10.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="timeline-card reveal h-100">
-            <span class="timeline-year">2022 - 2024</span>
+            <span class="timeline-year">2021 - 2022</span>
             <h5>Higher Secondary</h5>
-            <p class="mb-0">Add your school name and major subjects here.</p>
+            <p class="mb-0">Linga Global School(CBSE), Krishnankovil.</p>
+            <p>Mark percentage: 70%</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="timeline-card reveal h-100">
             <span class="timeline-year">2020 - 2022</span>
             <h5>Secondary School</h5>
-            <p class="mb-0">Add your school details and key achievements here.</p>
+            <p class="mb-0">Srivi Lions matriculation and higher secondary school, Srivilliputhur.</p>
+            <p>Mark percentage: 71%</p>
           </div>
         </div>
       </div>
@@ -247,36 +245,39 @@
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-5">
             <p class="section-kicker">Let us connect</p>
-            <h3 class="text-white fw-semibold mb-3">Open to internships and opportunities</h3>
+            <h3 class="text-white fw-semibold mb-3">Open to opportunities</h3>
             <p class="text-light-emphasis mb-4">
               Reach out for frontend, full-stack, and MERN stack collaborations.
               I am happy to discuss freelance work, and team projects.
             </p>
             <ul class="list-unstyled contact-list mb-0">
-              <li><strong>Email:</strong> vishalpipin@gmail.com</li>
+              <li><strong>Email:</strong> vishalpipin@outlook.com</li>
               <li><strong>Phone:</strong> +91 93613 41618</li>
               <li><strong>Location:</strong> Srivilliputhur, Tamil Nadu, India</li>
               <li><strong>LinkedIn:</strong> linkedin.com/in/vishal</li>
             </ul>
           </div>
           <div class="col-lg-7">
-            <form class="contact-form" action="#" method="post">
+            <p class="contact-form-status alert alert-success py-2 px-3 mb-3 d-none" role="status" id="contact-success" aria-live="polite">
+              Your mail app should open with this message addressed to me. Click Send in Outlook (or your email app) to deliver it.
+            </p>
+            <form class="contact-form" action="#" method="post" data-mail-to="vishalpipin@outlook.com">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="name" class="form-label">Your Name</label>
-                  <input type="text" id="name" class="form-control" placeholder="Enter your name" />
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required autocomplete="name" />
                 </div>
                 <div class="col-md-6">
                   <label for="email" class="form-label">Email Address</label>
-                  <input type="email" id="email" class="form-control" placeholder="Enter your email" />
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required autocomplete="email" />
                 </div>
                 <div class="col-12">
                   <label for="subject" class="form-label">Subject</label>
-                  <input type="text" id="subject" class="form-control" placeholder="Enter subject" />
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter subject" required />
                 </div>
                 <div class="col-12">
                   <label for="message" class="form-label">Message</label>
-                  <textarea id="message" class="form-control" rows="4" placeholder="Write your message"></textarea>
+                  <textarea id="message" name="message" class="form-control" rows="4" placeholder="Write your message" required></textarea>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-gradient">Send Message</button>
